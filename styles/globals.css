@@ -7,9 +7,10 @@ body {
 }
 
 body {
-	--priBg: #000000;
+	--priBg: #FFF;
 	--secBg: #272a33;
-	--priText: #fff;
+	--priText: #000;
+	--priBtnText: #FFF
 	--secText: #6cadff;
 	--priBtnBg: #0053c7;
 	--priBtnBorder: #0053c7;
@@ -72,16 +73,7 @@ input:-webkit-autofill {
 }
 
 html,
-body {
+body , #__next{
 	height: 100%;
-	background-color: var(--priBg);
-}
-
-.cls_LoginInputs label {
-  color: #FFF;
-}
-
-.cls_LoginInputBox {
-  border-bottom: solid 1px #FFF !important;
-  color: #FFF !important;
+	/* background-color: var(--priBg); */
 }

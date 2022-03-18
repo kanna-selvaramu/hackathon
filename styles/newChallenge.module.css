@@ -13,6 +13,23 @@
     display: table;
 }
 
+.cls_IndustrySelect {
+	margin: 20px 0px !important;
+	text-align: left;
+}
+
+.cls_textfield {
+	margin: 20px 0px !important;
+}
+
+.cls_IndustrySelect 
+
+.cls_LoginWrapper{
+	height: 100%;
+    width: 100%;
+    display: table;
+}
+
 .cls_LoginWrap2 {
 	display: table-cell;
     height: 100%;
