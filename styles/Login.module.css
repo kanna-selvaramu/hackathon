@@ -1,0 +1,9 @@
+.cls_LoginCont {
+	width: 700px;
+	height: 600px;
+	margin: 50px auto;
+	padding: 60px 150px;
+	border-radius: 50px;
+	box-sizing: border-box;
+	border: solid 3px var(--priText);
+}

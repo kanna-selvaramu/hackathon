@@ -1,0 +1,15 @@
+.cls_ImageWrapper {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.cls_HomeWrapper {
+    position: relative;
+}
+
+.cls_BtnWrap {
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+    margin-right: -110px;
+}
