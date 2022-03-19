@@ -2,11 +2,12 @@ import { Box, Button } from '@mui/material'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { isLoggedIn } from '../config/utils'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Landing.module.css'
 import Image from 'next/image'
 import poster from '../static/poster.png'
+import Home from '../components/Home/Home'
 
-export default function Home() {
+export default function Landing() {
 
   const [ loginStatus , setLoggedIn ] = useState(false);
 
@@ -23,7 +24,7 @@ export default function Home() {
       </Head>
       {
         loginStatus ? 
-        <div>Home</div>
+        <Home />
         :
         <>
           <div className={styles.cls_HomeWrapper}>
@@ -31,9 +32,7 @@ export default function Home() {
               <Image
                 src={poster}
                 alt="Hackathon"
-                // layout='fill'
                 width={800}
-                // height={"auto"}
               />
             </div>
             <Box my={2} className = {styles.cls_BtnWrap}>

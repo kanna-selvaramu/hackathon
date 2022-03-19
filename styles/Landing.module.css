@@ -1,6 +1,6 @@
 .cls_ImageWrapper {
     text-align: center;
-    margin: 20px 0px;
+    background-color: var(--priText);
 }
 
 .cls_HomeWrapper {

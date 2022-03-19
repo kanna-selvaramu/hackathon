@@ -1,0 +1,53 @@
+.cls_Header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid 1px #000 ;
+    flex: 1;
+}
+
+.cls_HeadLogo {
+    display: flex;
+    align-items: center;
+    flex: 0.3;
+}
+
+.cls_HeadSpan {
+    margin: 0px 5px;
+    font-weight: bold;
+}
+
+.HeadList {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headListCont {
+    margin: 0px 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cls_HomeContent {
+    max-width: 800px;
+    margin: 20px auto;   
+}
+
+.cls_HomeBody {
+    line-height: 30px;
+    padding: 20px;
+}
+
+.cls_HomeBullet {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: solid 1px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}

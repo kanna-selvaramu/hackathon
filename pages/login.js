@@ -12,7 +12,7 @@ const Login = () => {
     const handleLogin = (values) => {
         if(values.empId) {
             localStorage.setItem("user", values.empId)
-            router.push("/dashboard");
+            router.push("/");
         }
     }
 
