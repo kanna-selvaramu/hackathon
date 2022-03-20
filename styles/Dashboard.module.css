@@ -1,0 +1,58 @@
+.cls_dashboardWrapper {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.cls_dashboardTitle {
+    text-align: center;
+    margin: 20px 0px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.cls_dashBody {
+    padding: 20px;
+}
+
+.cls_dashCont {
+    border: solid 1px #000;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.cls_dashContTitle {
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cls_dashContFooter {
+    margin: 20px 0px;
+    display: flex;
+}
+
+.cls_dateStr {
+    color: grey;
+    font-weight: bold;
+}
+
+.cls_upVoteCont {
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.cls_NewBtn {
+    width: 300px !important;
+	height: 60px !important;
+	line-height: 60px !important;
+	border-radius: 35px !important;
+	text-transform: uppercase !important;
+	cursor: pointer;
+    background-color: var(--priBtnBg);
+    color: #FFF;
+    font-weight: bold;
+    margin: 0 auto;
+}

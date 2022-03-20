@@ -4,10 +4,13 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { Box, Button, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import { useRouter } from "next/router";
+import { categories } from "../data/categories";
+import { addNewChallenge } from "../reducers/action";
 
 const newChallenge = () => {
 
     const router = useRouter();
+    const cat = categories;
 
     const validate = ( values ) => {
         let errors = {};
@@ -23,6 +26,17 @@ const newChallenge = () => {
         return errors;
     };
 
+    const addChallenge = (values) => {
+        let data = {
+            "title": values.title,
+            "desc": values.description,
+            "cat": values.category, 
+            "date": +new Date,
+            "upvote": "0"
+        }
+        addNewChallenge(data);
+        router.push("/dashboard")
+    }
 
     return (
         <div className={s.cls_LoginWrapper}>
@@ -41,6 +55,7 @@ const newChallenge = () => {
                         }}
                         validate={(initialValues) => validate(initialValues)} 
                         onSubmit={async (values) => {
+                            addChallenge(values)
                         }}>
 
                         {({
@@ -97,10 +112,13 @@ const newChallenge = () => {
                                     select // tell TextField to render select
                                     label="Category"
                                 >
-                                    <MenuItem value="health">Health Care</MenuItem>
-                                    <MenuItem value="edu">Education</MenuItem>
-                                    <MenuItem value="comm">Community</MenuItem>
-                                    <MenuItem value="sus">Sustainability</MenuItem>
+                                    {
+                                        categories.map((item , key) => {
+                                            return(
+                                                <MenuItem key = {key} value={item.title}>{item.title}</MenuItem>
+                                            )
+                                        })
+                                    }
                                 </TextField>
                                 <Box my={2} className = "cls_BtnWrap">
                                     <Button

@@ -1,9 +1,11 @@
 import React from "react";
-import s from '../styles/Login.module.css'
+import s from '../styles/Login.module.css';
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { Box, Button, TextField } from "@mui/material";
 import { useRouter } from "next/router";
+import { challenge } from "../data/challenge";
+import { updateChallenge } from "../reducers/action";
 
 const Login = () => {
 
@@ -11,7 +13,8 @@ const Login = () => {
 
     const handleLogin = (values) => {
         if(values.empId) {
-            localStorage.setItem("user", values.empId)
+            localStorage.setItem("user", values.empId);
+            updateChallenge(challenge);
             router.push("/");
         }
     }

@@ -8,10 +8,12 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
 import SchoolIcon from '@mui/icons-material/School';
 import SolarPowerIcon from '@mui/icons-material/SolarPower';
+import { categories } from "../../data/categories";
 
 const Home = () => {
 
-    const list = listEl
+    const list = listEl;
+    const cat = categories;
 
     return (
         <div className={s.cls_HomeWrapper}>
@@ -67,10 +69,13 @@ const Home = () => {
                             Categories
                         </div>
                         <div className = {s.cls_HomeBody} style = {{display: "flex"}}>
-                            <div className={s.cls_HomeBullet}><HealthAndSafetyIcon style = {{marginRight: "5px"}}/> HealthCare</div>
-                            <div className={s.cls_HomeBullet}><NaturePeopleIcon style = {{marginRight: "5px"}} /> Community</div>
-                            <div className={s.cls_HomeBullet}><SchoolIcon style = {{marginRight: "5px"}}/> Education</div>
-                            <div className={s.cls_HomeBullet}><SolarPowerIcon style = {{marginRight: "5px"}} /> Sustainabilty</div>
+                            {
+                                cat.map((item, key) => {
+                                    return (
+                                        <a className={s.cls_HomeBullet} key = {key} href={`/dashboard?category=${item.title}`}>{item.title}</a>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
